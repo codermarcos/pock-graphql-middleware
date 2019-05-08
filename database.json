@@ -1,0 +1,25 @@
+{
+  "unidades": [
+    {
+      "id": 1,
+      "marca": "Sergio Franco",
+      "unidade": "Ipanema Gal Osorio",
+      "codigo": "IPN",
+      "nome": "IPANEMA"
+    },
+    {
+      "id": 2,
+      "marca": "Foccus",
+      "unidade": "Unidade Avancada Diadema",
+      "codigo": "DIA",
+      "nome": "ABC UN AVANCADAS"
+    },
+    {
+      "id": 3,
+      "nome": "NITEROI",
+      "marca": "Sergio Franco",
+      "codigo": "NIC",
+      "unidade": "Sf-niteroi-centro"
+    }
+  ]
+}
