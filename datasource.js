@@ -1,6 +1,6 @@
 const { RESTDataSource } = require('apollo-datasource-rest');
 
-module.exports = class Datasource extends RESTDataSource {
+exports.Datasource = class extends RESTDataSource {
   constructor() {
     super();
     this.baseURL = 'http://localhost:3000/';

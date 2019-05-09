@@ -1,6 +1,6 @@
 
 const { ApolloServer, gql } = require('apollo-server');
-const Datasource = require('./datasource');
+const { Datasource } = require('./datasource');
 
 const typeDefs = gql`
   type Unidade {
