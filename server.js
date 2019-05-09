@@ -1,8 +1,6 @@
 
 const { ApolloServer, gql } = require('apollo-server');
 const Datasource = require('./datasource');
-let nextId = 3;
-
 
 const typeDefs = gql`
   type Unidade {
@@ -39,7 +37,6 @@ const typeDefs = gql`
     updateUnidade(unidade: UnidadeUpdate): Unidade
   }
 `;
-
 const resolvers = {
   Query: {
     unidades: (_, args, { dataSources }) => dataSources.unidades.getUnidades(),
@@ -54,9 +51,13 @@ const resolvers = {
 
 
 const server = new ApolloServer({
-  typeDefs,
+  dataSources: () => ({ unidades: new Datasource() }),
   resolvers,
-  dataSources: () => ({ unidades: new Datasource() })
+  typeDefs,
 })
 
-server.listen().then(({ url }) => { console.log(`🚀  Server ready at ${url}`) })
+server
+  .listen()
+  .then(
+    ({ url }) => console.log(`🚀  Server ready at ${url}`)
+  )
